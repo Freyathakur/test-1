@@ -1,3 +1,3 @@
-import { helper } from './utils.js'
+import { helper } from './lib.js'
 
 console.log(helper())
