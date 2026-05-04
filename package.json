@@ -1,12 +1,9 @@
 {
   "name": "agentic-cicd-test-js",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "test": "node -e \"console.log('test ok')\""
-  },
-  "dependencies": {
-    "react": "^17.0.0",
-    "react-router-dom": "^6.10.0"
+    "test": "node src/main.js"
   }
 }
