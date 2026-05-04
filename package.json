@@ -1,9 +1,11 @@
 {
   "name": "agentic-cicd-test-js",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
   "scripts": {
-    "test": "node src/main.js"
+    "test": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
   }
 }
