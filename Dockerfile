@@ -1,4 +1,4 @@
-FROM node:20-bookworm
-COPY app/app.js /app/app.js
+FROM python:3.12-slim-bookkworm
 WORKDIR /app
-CMD ["node", "/app/app.js"]
+COPY hello.py /app/hello.py
+CMD ["python", "/app/hello.py"]
