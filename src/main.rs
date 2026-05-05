@@ -1,4 +1,4 @@
-use tokio::runtime::Runtime;
+use tokio::Runtime;
 
 fn main() {
     let rt = Runtime::new().expect("failed to create runtime");
