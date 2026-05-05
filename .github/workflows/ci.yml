@@ -10,18 +10,3 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: DOCKER_BUILDKIT=0 docker build -t test:latest .
-name: CI
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          toolchain: stable
-      - run: cargo build
