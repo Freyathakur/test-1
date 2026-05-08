@@ -7,7 +7,7 @@ on:
 jobs:
   slow-job:
     runs-on: ubuntu-latest
-    timeout-minutes: 1
+    timeout-minutes: 2
     steps:
       - uses: actions/checkout@v4
       - run: sleep 90
