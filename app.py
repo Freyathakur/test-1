@@ -1,6 +1,9 @@
-def compute(x):
-    unused_value = 99
-    result = x * 2
-    return result
+import sys
+import os
+import json
 
-print(compute(5))
+def f( x ,y ):
+  z=x+y
+  return  z
+
+print(f(1,2))
