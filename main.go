@@ -9,3 +9,4 @@ func main() {
     fmt.Println(uuid.New())
 }
 // retry after worker restart
+// retry after Go 1.22 install
