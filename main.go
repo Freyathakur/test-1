@@ -8,3 +8,4 @@ import (
 func main() {
     fmt.Println(uuid.New())
 }
+// retry after worker restart
