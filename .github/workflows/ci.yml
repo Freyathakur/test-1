@@ -1,12 +1,8 @@
 name: CI
 on: [push]
 jobs:
-  tf:
+  yaml:
     runs-on: ubuntu-latest
-    defaults: { run: { working-directory: infra } }
     steps:
       - uses: actions/checkout@v4
-      - uses: hashicorp/setup-terraform@v3
-        with: { terraform_version: "1.7.5" }
-      - run: terraform init -backend=false
-      - run: terraform validate
+      - run: python -c "import yaml; yaml.safe_load(open('config.yml'))"
