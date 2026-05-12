@@ -1,5 +1,5 @@
-name:foo
-items :
+name: foo
+items:
  - one
  - two
-flag:    true
+flag: true
