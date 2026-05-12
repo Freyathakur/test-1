@@ -1,8 +1,12 @@
 name: CI
 on: [push]
 jobs:
-  validate:
+  tf:
     runs-on: ubuntu-latest
+    defaults: { run: { working-directory: infra } }
     steps:
       - uses: actions/checkout@v4
-      - run: python -c "import json; json.load(open('data/config.json'))"
+      - uses: hashicorp/setup-terraform@v3
+        with: { terraform_version: "1.7.5" }
+      - run: terraform init -backend=false
+      - run: terraform validate
