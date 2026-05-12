@@ -1,8 +1,10 @@
 name: CI
 on: [push]
 jobs:
-  yaml:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python -c "import yaml; yaml.safe_load(open('config.yml'))"
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.21" }
+      - run: go build ./...
