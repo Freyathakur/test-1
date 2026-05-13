@@ -1,6 +1,0 @@
-{
-  "name": "scenario-c5",
-  "version": "1.0.0",
-  "scripts": { "build": "tsc index.ts" },
-  "devDependencies": { "typescript": "^5.0.0" }
-}
