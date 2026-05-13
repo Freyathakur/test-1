@@ -5,4 +5,4 @@ items:
   -two
   - three
 nested
-  key: value
+  key: value# trigger c-6 retry
