@@ -1,2 +1,2 @@
 def test_smoke():
-    assert 1 == 1
+    assert 2 == 1  # This will fail and trigger cache operations
