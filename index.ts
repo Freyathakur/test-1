@@ -1,4 +1,4 @@
 function greet(name: string): string {
-    return name.toUpperCase().toFixed(2); // bug: string has no toFixed
+    return Number(name).toFixed(2); // fixed: convert string to number before toFixed
 }
 console.log(greet("hello"));
