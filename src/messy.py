@@ -1,5 +1,7 @@
-def add( a ,b ):
-  return a   +b
+def add(a, b):
+    return a + b
 
-x   =add(1,2);    y='hello'
-print(x ,y)
+
+x = add(1, 2)
+y = "hello"
+print(x, y)
