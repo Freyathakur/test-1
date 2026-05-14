@@ -1,11 +1,14 @@
 name: CI
-on: [push]
+on:
+  push:
+    branches: [main, "smoke/**", "cicd-copilot/**"]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
-      - run: pip install pytest
-      - run: python -m pytest tests/ -q
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
