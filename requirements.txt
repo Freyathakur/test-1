@@ -1,0 +1,5 @@
+# Intentionally pinned to an old release where TestClient does not
+# accept app= as a keyword arg (positional-only). The user's test
+# passes app=Flask(__name__) → TypeError at runtime.
+werkzeug==0.16.1
+pytest==8.0.0
