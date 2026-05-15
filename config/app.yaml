@@ -1,5 +1,6 @@
 service:
   name: smoke-svc
+ 
  port: 8080      # ← bad indent: 1 space instead of 2
   env:
     - KEY: VALUE
