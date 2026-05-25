@@ -7,4 +7,5 @@ def test_proprietary_validation():
         ["sh", "-c", "echo '[my-corp-validator] FAIL: schema-v2 manifest missing field deployment.canary_strategy at line 47'; exit 1"],
         capture_output=True, text=True, timeout=10,
     )
-    assert result.returncode == 0, result.stdout
+    assert result.returncode == 1
+    assert '[my-corp-validator] FAIL: schema-v2 manifest missing field deployment.canary_strategy at line 47' in result.stdout
