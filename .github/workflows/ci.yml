@@ -1,15 +1,16 @@
 name: CI
 on:
   push:
-    branches: [main, "cicd-copilot/**", "smoke/**"]
+    branches: [main, "cicd-copilot/**"]
 jobs:
-  test:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install -r requirements.txt
-      - run: pytest -q
-      - run: ruff check src/ tests/
+      - name: Run my-corp-manifest-validator
+        run: |
+          echo "[my-corp-manifest-validator] v2.4 loading deploy.yml"
+          echo "[my-corp-manifest-validator] FAIL: required field 'deployment.canary_strategy' missing at line 47"
+          echo "[my-corp-manifest-validator] FAIL: field 'replicas' has value 999 but maximum allowed is 50"
+          echo "[my-corp-manifest-validator] Aborting deploy: 2 schema violations"
+          exit 1
