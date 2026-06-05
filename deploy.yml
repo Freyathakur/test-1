@@ -1,0 +1,6 @@
+deployment:
+  name: my-app
+  replicas: 3
+  canary_strategy: simple
+  image: my-app:latest
+  environment: production
