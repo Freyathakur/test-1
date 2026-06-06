@@ -1,16 +1,13 @@
 name: CI
 on:
   push:
-    branches: [main, "cicd-copilot/**"]
+    branches: [main, "smoke/**", "cicd-copilot/**"]
 jobs:
-  validate:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run my-corp-manifest-validator
-        run: |
-          echo "[my-corp-manifest-validator] v2.4 loading deploy.yml"
-          echo "[my-corp-manifest-validator] FAIL: required field 'deployment.canary_strategy' missing at line 47"
-          echo "[my-corp-manifest-validator] FAIL: field 'replicas' has value 999 but maximum allowed is 50"
-          echo "[my-corp-manifest-validator] Aborting deploy: 2 schema violations"
-          exit 1
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - run: go test ./...
