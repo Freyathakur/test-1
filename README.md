@@ -149,3 +149,5 @@ git push origin smoke/missing-config
 **Expected failure:** `config-ci / Validate config/settings.json` —
 `FileNotFoundError: [Errno 2] No such file or directory: 'config/settings.json'`.  
 **Expected fix:** copilot re-creates `config/settings.json` with valid JSON content.
+
+<!-- retest: go subdir-path fix verification -->
