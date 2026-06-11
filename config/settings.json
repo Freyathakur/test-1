@@ -1,7 +1,4 @@
 {
-  "app_name": "cicd-copilot-testbed",
-  "version": "1.0.0",
-  "log_level": "info",
-  "max_retries": 3,
+  "max_retries": "three",
   "timeout_seconds": 30
 }
