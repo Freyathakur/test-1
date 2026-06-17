@@ -6,5 +6,5 @@ func Double(n int) int {
 
 func Quad(n int) int {
 	// bug: typo — should call Double, not double
-	return double(n) * 2
+	return Double(n) * 2
 }
