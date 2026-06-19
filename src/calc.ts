@@ -3,4 +3,4 @@ export function double(n: number): number {
 }
 
 // bug: passing a string to a number parameter
-export const result: number = double("5");
+export const result: number = double(Number("5"));
