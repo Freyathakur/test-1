@@ -1,0 +1,11 @@
+{
+  "name": "smoke-eslint",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src --max-warnings 0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
